@@ -9,26 +9,31 @@
 </head>
 <body>
     
-    <input type="date" id="startDate">
-    <input type="date" id="endDate">
-    <button id="btn">확인</button>
+    <div class="datecontainer">
+        <div class="datecontainerdate">
+            <label for="startDate">전입일 <input type="date" id="startDate" value="2020-08-23"></label>
+            <label for="endDate">전역일 <input type="date" id="endDate" value="2022-05-23"></label>
+        </div>
+        <button id="btn">확인</button>
+    </div>
     
 
-
-    <ul id="container1">
-        <li>총 복무일 수</li>
-        <li></li>
-    </ul>
-
-    <ul id="contianer2">
-        <li>남은 복무일 수</li>
-        <li></li>
-    </ul>
-
-    <ul id="container3">
-        <li>퍼센테이지</li>
-        <li></li>
-    </ul>
+    <div class="maincontainer">
+        <ul id="container1">
+            <li>총 복무일 수</li>
+            <li></li>
+        </ul>
+        
+        <ul id="contianer2">
+            <li>남은 복무일 수</li>
+            <li></li>
+        </ul>
+        
+        <ul id="container3">
+            <li>퍼센테이지</li>
+           <li></li>
+        </ul>
+    </div class="maincontainer">
     <script src="js.js"></script>
 </body>
 </html>
