@@ -49,11 +49,10 @@ function addlist(location, value) {
 
 function clear() {
     const ulChild = uls();
-
+    console.log(ulChild);
     for (const items of ulChild) {
         items.removeChild(items.children[1]);
     }
-    
 }
 ///date객체 전달
 
