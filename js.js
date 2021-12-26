@@ -14,6 +14,8 @@ function function1(event) {
     addlist(all, allDay);
     addlist(rest, restDay);
     addlist(percent, percentDay);
+
+    progress(percentDay);
 }
 
 function dateCal() {
@@ -35,10 +37,14 @@ function inputValue() {
 }
 
 function addlist(location, value) {
+    const $li = [...location.children][0];    
+
+    console.log($li);
     const textNode = document.createTextNode(value);
+
     const listNode = document.createElement('li');
     listNode.appendChild(textNode);
-    location.appendChild(listNode);
+    $li.appendChild(listNode);
 }
 
 function clear() {
@@ -48,4 +54,19 @@ function clear() {
     }
 }
 
+function progress(value) {
+    var ele = document.getElementById('progressing');
+    var width = 5;
+    var id = setInterval(frame, 45);
+    function frame(){
+        if ( width >= value ){
+            clearInterval(id);
+            
+        } else {
+            width++;
+            ele.style.width = width + "%";
+            ele.innerHTML = width + "%";
+        }
+    }
+}
 init();
